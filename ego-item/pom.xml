@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ego</artifactId>
+        <groupId>com.ego.parent</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>ego-item</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>ego-item-interface</module>
+        <module>ego-item-service</module>
+    </modules>
+    <!--<dependencies>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash;&lt;!&ndash;web启动器&ndash;&gt;&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-web</artifactId>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash;&lt;!&ndash; mybatis plus启动器 &ndash;&gt;&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>com.baomidou</groupId>-->
+            <!--<artifactId>mybatis-plus-boot-starter</artifactId>-->
+            <!--<version>${mybatisplus.starter.version}</version>-->
+        <!--</dependency>-->
+        <!--&lt;!&ndash;​&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash; 分页助手启动器 &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+            <!--&lt;!&ndash;<groupId>com.github.pagehelper</groupId>&ndash;&gt;-->
+            <!--&lt;!&ndash;<artifactId>pagehelper-spring-boot-starter</artifactId>&ndash;&gt;-->
+            <!--&lt;!&ndash;<version>${pageHelper.starter.version}</version>&ndash;&gt;-->
+        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+         <!--&lt;!&ndash;mysql驱动&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>mysql</groupId>-->
+            <!--<artifactId>mysql-connector-java</artifactId>-->
+            <!--<version>${mysql.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.ego.item</groupId>-->
+            <!--<artifactId>ego-item-interface</artifactId>-->
+            <!--<version>${ego.latest.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-actuator</artifactId>-->
+        <!--</dependency>-->
+    <!--</dependencies>-->
+</project>
