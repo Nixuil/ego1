@@ -1,0 +1,49 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/ego
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 192.168.153.137
+  rabbitmq:
+    host: 192.168.153.137
+    username: ego
+    password: ego
+    virtual-host: ego
+    template:
+      retry:
+        enabled: true
+        initial-interval: 10000ms
+        max-interval: 210000ms
+        multiplier: 2
+    publisher-confirms: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${eureka.instance.ip-address}.${server.port}
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15
+
+mybatis-plus:
+  type-aliases-package: com.ego.user.pojo
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  level:
+    root: error
+    com.ego.user: debug
+    org.springframework.jdbc: debug
+  file:
+    name: d://logs/user.log
+  pattern:
+    #控制台日志输出格式配置，仅对控制台有效
+    console: "%date %-5level %logger{0} - %message%n"

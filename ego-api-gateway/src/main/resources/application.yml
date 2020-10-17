@@ -17,6 +17,12 @@ zuul:
   retryable: true
   routes:
     item-service: /item/** # 将商品微服务映射到/item/**
+    search-service: /search/** # 将商品微服务映射到/search/**
+    user-service: /user/** # 将商品微服务映射到/user/**
+    auth-service: /auth/** # 授权中心微服务
+    cart-service: /cart/**
+  add-host-header: true
+  sensitive-headers:  #不设置敏感请求头
 ribbon:
   ConnectTimeout: 250 # 连接超时时间(ms)
   ReadTimeout: 200000 # 通信超时时间(ms)
@@ -30,3 +36,15 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 1000000 # 熔断超时时长：10000ms
+ego:
+  filter:
+    allowPaths:
+      - /api/auth
+      - /api/search
+      - /api/user/register
+      - /api/user/check
+      - /api/user/send
+      - /api/item
+  jwt:
+    pubKeyPath: E:\\tmp\\rsa\\rsa.pub # 公钥地址
+    cookieName: EGO_TOKEN # cookie的名称

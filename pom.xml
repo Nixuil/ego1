@@ -8,6 +8,15 @@
         <module>ego-api-gateway</module>
         <module>ego-item</module>
         <module>ego-common</module>
+        <module>ego-upload</module>
+        <module>ego-search</module>
+        <module>ego-goods-web</module>
+        <module>ego-user</module>
+        <module>ego-sms</module>
+        <module>ego-auth</module>
+        <module>ego-cart</module>
+        <module>ego-order</module>
+        <module>ego-order</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

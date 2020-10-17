@@ -8,11 +8,11 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 /**
  *
  **/
+@MapperScan("com.ego.item.mapper")
 @SpringBootApplication
 @EnableDiscoveryClient
-@MapperScan("com.ego.item.mapper")
 public class EgoItemService {
     public static void main(String[] args) {
-        SpringApplication.run(EgoItemService.class, args);
+        SpringApplication.run(EgoItemService.class,args);
     }
 }

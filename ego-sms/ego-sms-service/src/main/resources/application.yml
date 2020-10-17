@@ -1,0 +1,15 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: sms-service
+  rabbitmq:
+    host: 192.168.153.137
+    username: ego    password: ego
+    virtual-host: ego
+ego:
+  sms:
+    accessKeyId: LTAI4G7XhqNpu64apq9q7bTh
+    accessKeySecret: C3hLJrEkUhPHUvdd1vzX5aIhKXHLmn
+    signName: 开发用户管理系统
+    verifyCodeTemplate: 贷款测试

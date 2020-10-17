@@ -4,7 +4,7 @@ spring:
   application:
     name: item-service
   datasource:
-    url: jdbc:mysql://localhost:3306/easybuy
+    url: jdbc:mysql://localhost:3306/ego
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
@@ -21,3 +21,12 @@ eureka:
     prefer-ip-address: true
     ip-address: 127.0.0.1
     instance-id: ${spring.application.name}:${server.port}
+logging:
+  level:
+    root: info
+    com.ego.item: debug
+  file:
+    name: d://logs/item.log
+  pattern:
+    #控制台日志输出格式配置，仅对控制台有效
+    console: "%d -%msg%n"
